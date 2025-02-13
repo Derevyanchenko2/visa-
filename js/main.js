@@ -1,3 +1,17 @@
+// burger-menu
+document.querySelector(".open-menu-js").addEventListener("click", function() {
+    var mobileMenuOverlay = document.querySelector(".mobileMenu-overlay");
+    mobileMenuOverlay.classList.add("open");
+    document.body.style.overflowX = "hidden";
+  });
+  
+  document.querySelector(".mobileMenu-close").addEventListener("click", function() {
+    var mobileMenuOverlay = document.querySelector(".mobileMenu-overlay");
+    mobileMenuOverlay.classList.remove("open");
+    document.body.style.overflowX = "auto";
+  });
+
+
 document.addEventListener("DOMContentLoaded", function () {
     let dropdown = document.querySelector(".header-item");
     let dropdownMenu = document.querySelector(".dropdown-menu");
@@ -81,8 +95,10 @@ answers.forEach((event) => {
 
 const swiper = new Swiper('.swiper', {
     direction: 'horizontal',
-    loop: false,
-    speed: 800, 
+    observer: true,
+    observeParents: true,
+    slidesPerView: "auto",
+    speed: 900,
 
     navigation: {
         nextEl: '.next-btn',

@@ -6,6 +6,7 @@
     <title>Visa</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/burger-menu.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link
         rel="stylesheet"
@@ -19,6 +20,36 @@
         <div class="main-wrapper">
            
             <div class="main-left">
+                <div class="mobileMenu-overlay">
+                    <div class="mobileMenu">
+                        <button class="mobileMenu-close">&times;</button>
+                        <div class="mobileMenu-container">
+                            <ul class="header-menu">
+                                <li class="mobileMenu-item">
+                                    <a class="mobileMenu-link" href="./index.html">Usługi</a>
+                                </li>
+                                <li class="mobileMenu-item">
+                                    <a class="mobileMenu-link" href="./insurance.html">Plans</a>
+                                </li>
+                                <li class="mobileMenu-item">
+                                    <a class="mobileMenu-link" href="./faq.html">Contacts
+                                    </a>
+                                </li>
+                                <div class="dropdown">
+                                    <button class="dropbtn header-link">Услуги</button>
+                                    <div class="dropdown-content">
+                                      <a href="#" class="header-link dropdown-link">Легализация пребывания</a>
+                                      <a href="#" class="header-link dropdown-link">Для проживания и работы</a>
+                                      <a href="#" class="header-link dropdown-link">Визы</a>
+                                      <a href="#" class="header-link dropdown-link">Поиск и аренда квартиры</a>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                  </div>
+
+
                 <header class="header">
                     <div class="header-wrapper">
                         <a href="#" class="header-logo">
@@ -47,6 +78,13 @@
                                 </div>
                             </div>
                         </ul>
+                        <div class="burger open-menu-js">
+                            <div class="open-menu">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
                     </div>
                 </header>
                 <div class="main-content">
@@ -55,7 +93,8 @@
                     <a href="#" class="main-btn btn">Посмотреть услуги</a>
                 </div>
             </div>
-            <img class="main-bottom__decor" src="images/Group 266 (2).png" alt="">
+            <div class="main-right__wrapper">
+                <img class="main-bottom__decor" src="images/Group 266 (2).png" alt="">
             <img class="main-bottom__girl" src="images/girl2.png" alt="">
             <div class="main-right">
                 <img class="main-right__flag" src="images/poland-flag.png" alt="">
@@ -130,6 +169,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
      
@@ -330,17 +370,26 @@
     <section id="contacts" class="contacts">
         <div class="container">
             <div class="contacts-box">
-        <img class="contacts-girl" src="images/contacts-girl.png" alt="">
 
                 <h2 class="section-title contacts-title">
                     <span class="text-blue">Свяжитесь 
                     с нами</span>
     
             </h2>
-            <p class="contacts-text">
+            <img class="contacts-girl" src="images/contacts-girl.png" alt="">
+            <div class="contacts-text">
                 Мы специализируемся на помощи с <span class="text-blue">визами и документами</span> для жизни и <span class="text-blue">работы в Польше. </span> Свяжитесь с нами через Telegram, WhatsApp или Viber, чтобы получить профессиональную консультацию!»
-            </p>
-            <div class="contacts-socials">
+                <div class="contacts-socials contacts-socials--mobile">
+                    <a href="https://t.me/qxizerr" class="contacts-social contacts-social--telegram" target="_blank">
+                        <img src="images/telegram.svg" alt="Telegram">
+                    </a>
+                    <a href="#" class="contacts-social contacts-social--viber">
+                        <img src="images/whatsapp.svg" alt="">
+                    </a>
+                </div>
+            </div>
+              
+            <div class="contacts-socials contacts-socials--pc">
                 <a href="https://t.me/qxizerr" class="contacts-social contacts-social--telegram" target="_blank">
                     <img src="images/telegram.svg" alt="Telegram">
                 </a>
@@ -358,106 +407,195 @@
                 <h2 class="section-title reviews-title"><span class="text-blue">Отзывы</span> наших клиентов</h2>
                 <p class="section-text"> <strong>Реальные истории успешного оформления документов</strong></p>
             </div>
-            <div class="swiper">
-                <div class="swiper-wrapper reviews-wrapper">
-                    <div class="swiper-slide slide">
-                        <div class="slide-content">
-                            <span class="slide-content__number">0.1</span>
-                            <h2 class="slide-content__name">
-                                Иван Петро
-                            </h2>
-                            <p class="slide-content__text">
-                                Думал, что оформление карты побыту – это долгий и сложный процесс. Но ребята сделали все быстро и без лишних вопросов! Подготовили документы, помогли с записью, и через пару месяцев я уже получил карту! Спасибо за профессионализм!
-                            </p>
-                            <div class="slide-arrows">
-                                <button class="slide-btn prev-btn">
-                                    <img src="images/reviews-images/prev-btn.svg" alt="">
-                                </button>
-                                <button class="slide-btn next-btn">
-                                    <img src="images/reviews-images/next-btn.svg" alt="">                                             
-                                </button>
+            <!-- Slider MOB -->
+            <div class="slider-mob">
+                <div class="swiper">
+                    <div class="swiper-wrapper reviews-wrapper">
+                        <div class="swiper-slide slide-mob">
+                            <div class="slide-person">
+                                <div class="slide-person__img">
+                                    <img src="images/reviews-images/1.png" alt="slider-avatar">
+                                </div>
+                                <div class="slide-person__info">
+                                    <span class="slide-content__number">0.1</span>
+                                    <h2 class="slide-content__name">
+                                        Иван Петро
+                                    </h2>
+                                </div>
                             </div>
-                        </div>
-                        
-                        <div class="slide-avatar">
-                            <img class="slide-avatar__img" src="images/reviews-images/1.png" alt="Фото отзыва">
-                        </div>
-                    </div>
-                    <div class="swiper-slide slide">
-                        <div class="slide-content">
-                            <span class="slide-content__number">0.2</span>
-                            <h2 class="slide-content__name">
-                                Лиза Василенко
-                            </h2>
-                            <p class="slide-content__text">
-                                "Я думала, что оформить гражданство Польши – это нереально сложно. Но команда объяснила мне весь процесс, помогла собрать документы и подать заявление. Через время я уже держала паспорт в руках! Вы лучшие!"
-                            </p>
-                            <div class="slide-arrows">
-                                <button class="slide-btn prev-btn">
-                                    <img src="images/reviews-images/prev-btn.svg" alt="">
-                                </button>
-                                <button class="slide-btn next-btn">
-                                    <img src="images/reviews-images/next-btn.svg" alt="">                                             
-                                </button>
+                            <div class="slide-content__mob">
+                                <p class="slide-content__text">
+                                    "Я думала, что оформить гражданство Польши – это нереально сложно. Но команда объяснила мне весь процесс, помогла собрать документы и подать заявление. Через время я уже держала паспорт в руках! Вы лучшие!"
+                                </p>
                             </div>
+                         
                         </div>
-                        
-                        <div class="slide-avatar">
-                            <img class="slide-avatar__img" src="images/reviews-images/2.jpg" alt="Фото отзыва">
-                        </div>
-                    </div>
-                    <div class="swiper-slide slide">
-                        <div class="slide-content">
-                            <span class="slide-content__number">0.3</span>
-                            <h2 class="slide-content__name">
-                                Андрей Шестаков
-                            </h2>
-                            <p class="slide-content__text">
-                                Получил польское водительское удостоверение с вашей помощью! Сам бы точно не справился с бумажной волокитой, но тут все сделали четко, без нервов и неожиданных проблем. Рекомендую!
-                            </p>
-                            <div class="slide-arrows">
-                                <button class="slide-btn prev-btn">
-                                    <img src="images/reviews-images/prev-btn.svg" alt="">
-                                </button>
-                                <button class="slide-btn next-btn">
-                                    <img src="images/reviews-images/next-btn.svg" alt="">                                             
-                                </button>
+                        <div class="swiper-slide slide-mob">
+                            <div class="slide-person">
+                                <div class="slide-person__img">
+                                    <img src="./images/reviews-images/2.jpg" alt="slider-avatar">
+                                </div>
+                                <div class="slide-person__info">
+                                    <span class="slide-content__number">0.2</span>
+                                    <h2 class="slide-content__name">
+                                        Лиза Василенко
+                                    </h2>
+                                </div>
                             </div>
-                        </div>
-                        
-                        <div class="slide-avatar">
-                            <img class="slide-avatar__img" src="images/reviews-images/3.jpg" alt="Фото отзыва">
-                        </div>
-                    </div>
-                    <div class="swiper-slide slide">
-                        <div class="slide-content">
-                            <span class="slide-content__number">0.4</span>
-                            <h2 class="slide-content__name">
-                                Алина Яковлева 
-                            </h2>
-                            <p class="slide-content__text">
-                                Спасибо вашей компании за быструю и грамотную помощь с документами в Польше! Оформляла PESEL, ВНЖ и водительские права — всё четко, без лишних проблем. Всегда на связи, объясняют каждую деталь. Надежно и профессионально, рекомендую!
-                            </p>
-                            <div class="slide-arrows">
-                                <button class="slide-btn prev-btn">
-                                    <img src="images/reviews-images/prev-btn.svg" alt="">
-                                </button>
-                                <button class="slide-btn next-btn">
-                                    <img src="images/reviews-images/next-btn.svg" alt="">                                             
-                                </button>
+                            <div class="slide-content__mob">
+                                <p class="slide-content__text">
+                                    Я думала, что оформить гражданство Польши – это нереально сложно. Но команда объяснила мне весь процесс, помогла собрать документы и подать заявление. Через время я уже держала паспорт в руках! Вы лучшие!
+                                </p>
                             </div>
+                         
                         </div>
+                        <div class="swiper-slide slide-mob">
+                            <div class="slide-person">
+                                <div class="slide-person__img">
+                                    <img src="images/reviews-images/3.jpg" alt="slider-avatar">
+                                </div>
+                                <div class="slide-person__info">
+                                    <span class="slide-content__number">0.3</span>
+                                    <h2 class="slide-content__name">
+                                        Андрей Шестаков
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="slide-content__mob">
+                                <p class="slide-content__text">
+                                    Получил польское водительское удостоверение с вашей помощью! Сам бы точно не справился с бумажной волокитой, но тут все сделали четко, без нервов и неожиданных проблем. Рекомендую!
+                                </p>
+                            </div>
+                         
+                        </div>
+                        <div class="swiper-slide slide-mob">
+                            <div class="slide-person">
+                                <div class="slide-person__img">
+                                    <img src="images/reviews-images/5.jpg" alt="slider-avatar">
+                                </div>
+                                <div class="slide-person__info">
+                                    <span class="slide-content__number">0.4</span>
+                                    <h2 class="slide-content__name">
+                                        Алина Яковлева 
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="slide-content__mob">
+                                <p class="slide-content__text">
+                                    Спасибо вашей компании за быструю и грамотную помощь с документами в Польше! Оформляла PESEL, ВНЖ и водительские права — всё четко, без лишних проблем. Всегда на связи, объясняют каждую деталь. 
+                                </p>
+                            </div>
+                         
+                        </div>
+                   
                         
-                        <div class="slide-avatar">
-                            <img class="slide-avatar__img" src="images/reviews-images/4.jpg" alt="Фото отзыва">
-                        </div>
+             
                     </div>
-                    
-         
+    
+                  
                 </div>
-
-              
-              </div>
+            </div>
+            <!-- ====/// Slider MOB END-->
+        
+            <!-- Slider PC -->
+            <div class="slider-pc">
+                <div class="swiper">
+                    <div class="swiper-wrapper reviews-wrapper">
+                        <div class="swiper-slide slide">
+                            <div class="slide-avatar">
+                                <img class="slide-avatar__img" src="images/reviews-images/1.png" alt="Фото отзыва">
+                                <div class="slide-arrows">
+                                    <button class="slide-btn prev-btn">
+                                        <img src="images/reviews-images/prev-btn.svg" alt="">
+                                    </button>
+                                    <button class="slide-btn next-btn">
+                                        <img src="images/reviews-images/next-btn.svg" alt="">                                             
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="slide-content">
+                                <span class="slide-content__number">0.1</span>
+                                <h2 class="slide-content__name">
+                                    Иван Петро
+                                </h2>
+                                <p class="slide-content__text">
+                                    Думал, что оформление карты побыту – это долгий и сложный процесс. Но ребята сделали все быстро и без лишних вопросов! Подготовили документы, помогли с записью, и через пару месяцев я уже получил карту!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide">
+                            <div class="slide-avatar">
+                                <img class="slide-avatar__img" src="images/reviews-images/2.jpg" alt="Фото отзыва">
+                                <div class="slide-arrows">
+                                    <button class="slide-btn prev-btn">
+                                        <img src="images/reviews-images/prev-btn.svg" alt="">
+                                    </button>
+                                    <button class="slide-btn next-btn">
+                                        <img src="images/reviews-images/next-btn.svg" alt="">                                             
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="slide-content">
+                                <span class="slide-content__number">0.2</span>
+                                <h2 class="slide-content__name">
+                                    Лиза Василенко
+                                </h2>
+                                <p class="slide-content__text">
+                                    "Я думала, что оформить гражданство Польши – это нереально сложно. Но команда объяснила мне весь процесс, помогла собрать документы и подать заявление. Через время я уже держала паспорт в руках! Вы лучшие!"
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide">
+                            <div class="slide-avatar">
+                                <img class="slide-avatar__img" src="images/reviews-images/3.jpg" alt="Фото отзыва">
+                                <div class="slide-arrows">
+                                    <button class="slide-btn prev-btn">
+                                        <img src="images/reviews-images/prev-btn.svg" alt="">
+                                    </button>
+                                    <button class="slide-btn next-btn">
+                                        <img src="images/reviews-images/next-btn.svg" alt="">                                             
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="slide-content">
+                                <span class="slide-content__number">0.3</span>
+                                <h2 class="slide-content__name">
+                                    Андрей Шестаков
+                                </h2>
+                                <p class="slide-content__text">
+                                    Получил польское водительское удостоверение с вашей помощью! Сам бы точно не справился с бумажной волокитой, но тут все сделали четко, без нервов и неожиданных проблем. Рекомендую!
+                                </p>
+                              
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide">
+                            <div class="slide-avatar">
+                                <img class="slide-avatar__img" src="images/reviews-images/5.jpg" alt="Фото отзыва">
+                                <div class="slide-arrows">
+                                    <button class="slide-btn prev-btn">
+                                        <img src="images/reviews-images/prev-btn.svg" alt="">
+                                    </button>
+                                    <button class="slide-btn next-btn">
+                                        <img src="images/reviews-images/next-btn.svg" alt="">                                             
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="slide-content">
+                                <span class="slide-content__number">0.4</span>
+                                <h2 class="slide-content__name">
+                                    Алина Яковлева 
+                                </h2>
+                                <p class="slide-content__text">
+                                    Спасибо вашей компании за быструю и грамотную помощь с документами в Польше! Оформляла PESEL, ВНЖ и водительские права — всё четко, без лишних проблем. Всегда на связи, объясняют каждую деталь. 
+                                </p>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- === /// Slider PC END -->
+           
         </div>
     </section>
     <!-- ////=Restimonial End -->
