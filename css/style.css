@@ -592,7 +592,7 @@ ul {
         padding: 15px;
     }
     @media(max-width: 768px){
-        font-size: 19px;
+        font-size: 17px;
         padding: 14px;
     }
 }
@@ -719,6 +719,9 @@ ul {
     background-color: #fff;
     @media(max-width: 768px){
         padding: 25px;
+    }
+    @media(max-width: 480px){
+        padding: 15px;
     }
 }
 
@@ -941,7 +944,7 @@ ul {
         max-width: 310px;
     }
     @media(max-width:480px){
-        max-width: 270px;
+        max-width: 100%;
         object-fit:cover !important ;
     }
     /* width: 120px; */
@@ -1092,11 +1095,18 @@ ul {
         display: block;
     }
 }
-.slide-mob{
+.slide-mob {
     display: flex;
     flex-direction: column;
     color: #fff;
     padding: 27px;
+    /* Фиксированная минимальная высота для всех слайдов */
+    min-height: 400px; /* Подберите нужное значение */
+    height: auto; /* Убираем 100% для гибкости */
+    box-sizing: border-box; 
+    @media(max-width: 768px){
+        min-height: 330px;
+    }
 }
 .slide-person{
     display: flex

@@ -41,7 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const links = document.querySelectorAll('.header-link');
 
-  // Функция для плавной прокрутки
   function smoothScrollTo(target) {
       const start = window.scrollY;
       const distance = target.offsetTop - start;
@@ -98,6 +97,7 @@ const swiper = new Swiper('.swiper', {
     observer: true,
     observeParents: true,
     slidesPerView: "auto",
+    spaceBetween: 20, 
     speed: 900,
 
     navigation: {
