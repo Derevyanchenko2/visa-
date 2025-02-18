@@ -91,14 +91,20 @@ answers.forEach((event) => {
     });
 });
 
-
 const swiper = new Swiper('.swiper', {
     direction: 'horizontal',
     observer: true,
     observeParents: true,
     slidesPerView: "auto",
-    spaceBetween: 20, 
+    spaceBetween: 20,
     speed: 900,
+    loop: true,
+
+    autoplay: {
+        delay: 1500, // Интервал между слайдами (3 секунды)
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true, // Останавливает autoplay при наведении
+    },
 
     navigation: {
         nextEl: '.next-btn',
