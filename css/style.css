@@ -3,6 +3,8 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f8f8f8 !important;
+    overflow-x: hidden; /* Убирает горизонтальную прокрутку */
+      
 }
 
 ul {
@@ -643,6 +645,17 @@ ul {
     margin-left: -15px;
     margin-right: -15px;
   }
+  .job-cards--pc{
+    @media(max-width: 768px){
+        display: none;
+    }
+  }
+  .job-cards--mob{
+    display: none  !important;
+    @media(max-width: 768px){
+        display: block !important;
+    }
+  }
   .job-card{
     max-width: 310px !important;
     min-height: 150px;
@@ -701,6 +714,52 @@ ul {
     margin-top: 20px;
     margin-bottom: 15px;
   }
+  .button-prev,
+  .button-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px !important;
+      height: 40px !important;
+      background: #469DDD;
+      border: none;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.3s ease;
+  }
+  
+  .button-prev:hover,
+  .button-next:hover {
+      background: rgba(21, 133, 198, 0.8);
+  }
+  
+  .button-prev {
+      left: 15px;
+  }
+  
+  .button-next {
+      right: 15px;
+  }
+  
+  .button-prev svg,
+  .button-next svg {
+      width: 24px;
+      height: 24px;
+  }
+  .swiper-button-prev:after{
+    @media(max-width: 768px){
+        display: none;
+    }
+  }
+  .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
+    @media(max-width: 768px){
+        display: none;
+    }
+  }
+
 
 
 /* ///== END Job Section */
@@ -988,7 +1047,7 @@ ul {
     display: flex;
 }
 
-.swiper-slide {
+.slide ,.slide-mob {
     display: flex;
     flex-direction: row;
     background: 
@@ -1261,3 +1320,6 @@ ul {
     color: #000;
     text-decoration: none;
 }
+
+
+

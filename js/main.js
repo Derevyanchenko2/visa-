@@ -91,7 +91,7 @@ answers.forEach((event) => {
     });
 });
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.reviews-swiper', {
     direction: 'horizontal',
     observer: true,
     observeParents: true,
@@ -111,3 +111,28 @@ const swiper = new Swiper('.swiper', {
         prevEl: '.prev-btn',
     },
 });
+
+
+
+const JobSwiper = new Swiper('.job-cards--mob', {
+    direction: 'horizontal',
+    observer: true,
+    observeParents: true,
+    slidesPerView: 'auto', 
+    spaceBetween: 20,
+    speed: 900,
+    loop: false,
+    
+    navigation: {
+      nextEl: '.button-next',
+      prevEl: '.button-prev',
+    },
+  
+    breakpoints: {
+  
+      768: {
+        slidesPerView: 1, 
+      },
+    },
+  });
+  
