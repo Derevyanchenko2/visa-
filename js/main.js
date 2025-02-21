@@ -118,7 +118,7 @@ const JobSwiper = new Swiper('.job-cards--mob', {
     direction: 'horizontal',
     observer: true,
     observeParents: true,
-    slidesPerView: 'auto', 
+    slidesPerView: '1', 
     spaceBetween: 20,
     speed: 900,
     loop: false,
