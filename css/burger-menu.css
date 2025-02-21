@@ -160,13 +160,13 @@ Burger and mobile menu
     
     .open-menu span:first-child {
         transform-origin: 0% 0%;
-        width: 22px;
+        width: 20px;
     }
     
     .open-menu span:last-child {
         transform-origin: 0% 0%;
-        width: 22px;
-        height: 2px;
+        width: 20px;
+        height: 3px;
         margin-bottom: 0;
     }
 }
