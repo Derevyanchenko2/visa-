@@ -595,6 +595,7 @@ ul {
 }
   
 .service {
+    cursor: pointer;
     display: flex;
     align-items: center;
     color: #606483;
@@ -1101,8 +1102,12 @@ ul {
         url('../images/advantages-bg.png');
     background-size: cover; 
     border-radius: 30px;
-    overflow: hidden;   
-    height: 100% !important;
+    overflow: hidden;  
+    @media(max-width: 480px){
+        min-height: 388px !important; /* Минимальная высота */
+    }
+       
+ 
 
 }
 
@@ -1379,3 +1384,94 @@ ul {
 
 
 
+
+
+.burger {
+    width: 40px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1001;
+    position: relative;
+}
+
+.burger .open-menu span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+/* Анимация бургера при открытии */
+.burger.active .open-menu span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.burger.active .open-menu span:nth-child(2) {
+    opacity: 0;
+}
+.burger.active .open-menu span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Меню */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: #fff;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 60px 20px;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; 
+    height: 100%;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+/* Список */
+.mobile-menu__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu__list li {
+    margin-bottom: 20px;
+}
+
+.mobile-menu__list a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #469DDD !important;
+    transition: 0.3s;
+}
+
+.mobile-menu__list a:hover {
+    color: #f00;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    z-index: 999;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
