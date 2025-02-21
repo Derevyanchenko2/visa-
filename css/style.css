@@ -594,8 +594,16 @@ ul {
         padding: 15px;
     }
     @media(max-width: 768px){
-        font-size: 17px;
-        padding: 14px;
+        font-size: 20px;
+        padding: 17px;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+    @media(max-width:460px){
+        font-size: 18px;
+        padding: 13px;
     }
 }
 .service:hover {
@@ -719,8 +727,8 @@ ul {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      width: 40px !important;
-      height: 40px !important;
+      width: 50px !important;
+      height: 50px !important;
       background: #469DDD;
       border: none;
       border-radius: 50%;
@@ -746,8 +754,8 @@ ul {
   
   .button-prev svg,
   .button-next svg {
-      width: 24px;
-      height: 24px;
+      width: 30px !important;
+      height: 30px !important;
   }
   .swiper-button-prev:after{
     @media(max-width: 768px){

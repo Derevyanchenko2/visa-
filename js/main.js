@@ -101,7 +101,7 @@ const swiper = new Swiper('.reviews-swiper', {
     loop: true,
 
     autoplay: {
-        delay: 1500, // Интервал между слайдами (3 секунды)
+        delay: 3000, // Интервал между слайдами (3 секунды)
         disableOnInteraction: false,
         pauseOnMouseEnter: true, // Останавливает autoplay при наведении
     },
