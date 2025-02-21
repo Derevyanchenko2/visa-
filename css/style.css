@@ -755,8 +755,8 @@ ul {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      width: 40px !important;
-      height: 40px !important;
+      width: 50px !important;
+      height: 50px !important;
       background: #469DDD;
       border: none;
       border-radius: 50%;
@@ -1101,7 +1101,8 @@ ul {
         url('../images/advantages-bg.png');
     background-size: cover; 
     border-radius: 30px;
-    overflow: hidden;
+    overflow: hidden;   
+    height: 100% !important;
 
 }
 
@@ -1302,7 +1303,6 @@ ul {
         padding-left: 43px;
     }
     @media(max-width:  480px){
-        margin: 0;
         font-size: 14px;
     }
 }
