@@ -1068,6 +1068,8 @@ ul {
     @media(max-width:480px){
         max-width: 100%;
         /* object-fit:cover !important ; */
+        object-fit: cover;
+        height: auto;
     }
     /* width: 120px; */
 }
