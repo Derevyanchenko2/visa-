@@ -251,6 +251,7 @@ ul {
 .header-logo {
     display: block;
     /* padding-top: 12px; */
+   
 }
 
 .header-logo img {
@@ -267,6 +268,9 @@ ul {
 }
 .header-logo{
     margin-right: 80px;
+    @media(max-width: 1400px){
+        margin-right: 30px;
+    }
 }
 .header-list {
     align-items: center;
@@ -341,7 +345,7 @@ ul {
     @media(max-width: 768px){
         padding: 10px;
         font-size: 14px;
-        margin: 0 10px;
+        margin: 0;
     }
 }
 
@@ -629,11 +633,11 @@ ul {
         padding: 13px;
     }
 }
-.service:hover {
+/* .service:hover {
     color: #fff;
     background-color: #469ddd;
     transition: 0.4s all;
-}
+} */
 .service-icon{
     width: 30px;
     height: 30px;
@@ -1048,6 +1052,7 @@ ul {
         justify-content: center;
         margin: 0 auto;
         position: static;
+        max-width: 470px;
     }
     @media(max-width:768px){
         max-width: 340px;
@@ -1443,7 +1448,8 @@ ul {
 /* Список */
 .mobile-menu__list {
     list-style: none;
-    padding: 0;
+    padding-top: 70px;
+    text-align: center;
     margin: 0;
 }
 

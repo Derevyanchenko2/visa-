@@ -45,41 +45,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-  const links = document.querySelectorAll('.header-link');
+document.querySelectorAll('.scroll-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
 
-  function smoothScrollTo(target) {
-      const start = window.scrollY;
-      const distance = target.offsetTop - start;
-      const duration = 1000; 
-      let startTime = null;
+        const targetId = link.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
 
-      function animation(currentTime) {
-          if (startTime === null) startTime = currentTime;
-          const timeElapsed = currentTime - startTime;
-          const progress = Math.min(timeElapsed / duration, 1);
+        if (targetElement) {
+            smoothScrollTo(targetElement);
+        }
+    });
+});
 
-          window.scrollTo(0, start + distance * progress);
+function smoothScrollTo(target) {
+    const start = document.documentElement.scrollTop || document.body.scrollTop;
+    const distance = target.getBoundingClientRect().top;
+    const duration = 1000;
+    let startTime = null;
 
-          if (timeElapsed < duration) {
-              requestAnimationFrame(animation);
-          }
-      }
+    function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const progress = Math.min(timeElapsed / duration, 1);
 
-      requestAnimationFrame(animation);
-  }
+        window.scrollTo(0, start + distance * progress);
 
-  links.forEach(link => {
-      link.addEventListener('click', (e) => {
-          e.preventDefault();
+        if (timeElapsed < duration) {
+            requestAnimationFrame(animation);
+        }
+    }
 
-          const targetId = link.getAttribute('href').substring(1);
-          const targetElement = document.getElementById(targetId);
-
-          if (targetElement) {
-              smoothScrollTo(targetElement);
-          }
-      });
-  });
+    requestAnimationFrame(animation);
+}
 
 
 let answers = document.querySelectorAll(".accordion");
