@@ -391,6 +391,11 @@ ul {
 .dropdown-link:hover {
     color: #469ddd;
 }
+.dropdown-link{
+    @media(max-width: 768px){
+        font-size: 14px !important;
+    }
+}
 
 .dropdown:hover .dropdown-content {
     display: block;
